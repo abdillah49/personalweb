@@ -31,12 +31,12 @@ function App() {
               </div>
               <nav>
                 <ul className="menu">
-                  <li className="active"><a href="#about">About</a></li>
-                  <li><a href="#experience">Experience</a></li>
-                  <li><a href="#education">Education</a></li>
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#interest">Interest</a></li>
-                  <li><a href="#awards">Awards</a></li>
+                  <li className="active"><a>About</a></li>
+                  <li><a>Experience</a></li>
+                  <li><a>Education</a></li>
+                  <li><a>Skills</a></li>
+                  <li><a>Interest</a></li>
+                  <li><a>Awards</a></li>
                 </ul>
               </nav>
             </div>
