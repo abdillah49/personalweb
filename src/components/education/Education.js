@@ -8,28 +8,28 @@ const Education = () => {
                 <li>
                     <div className="timeline-user"><div></div></div>
                     <div className="timeline-content">
-                        <a>2014 ~ </a><br />
+                        <span>2014 ~ </span><br />
                         Bachelor's Degree of Technical Information
                         <div className="text">STMIK - STIE Mikroskil, Medan</div>
                     </div>
                 </li><li>
                     <div className="timeline-user"><div></div></div>
                     <div className="timeline-content">
-                        <a>2011 ~ 2014</a><br />
+                        <span>2011 ~ 2014</span><br />
                         Vocational High School of Software Engineering
                         <div className="text">SMK Swasta Mandiri, Percut Sei Tuan</div>
                     </div>
                 </li><li>
                     <div className="timeline-user"><div></div></div>
                     <div className="timeline-content">
-                        <a>2006 ~ 2009</a><br />
+                        <span>2006 ~ 2009</span><br />
                         Middle School
                         <div className="text">SMP Negeri 37, Medan</div>
                     </div>
                 </li><li>
                     <div className="timeline-user"><div></div></div>
                     <div className="timeline-content">
-                        <a>2000 ~ 2006</a><br />
+                        <span>2000 ~ 2006</span><br />
                         Elementary School
                         <div className="text">SD Negeri 064965, Medan</div>
                     </div>
