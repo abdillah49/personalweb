@@ -83,6 +83,7 @@ function App() {
                     <Route key={index} path={route.path} exact={route.exact} children={<route.main />} />
                   ))}
                 </Switch>
+                <Copyright/>
               </div>
             </div>
           </div>
