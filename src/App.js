@@ -1,5 +1,12 @@
 import React from 'react';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
+
 import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/experience/Experience';
@@ -17,44 +24,71 @@ import './assets/css/nivo-lightbox/default.css';
 import Imgme from './assets/images/me.jpg';
 
 function App() {
+  const routes = [
+    {
+      path: "/",
+      exact: true,
+      main: () => <About/>
+    },
+    {
+      path: "/experience",
+      main: () => <Experience/>
+    },
+    {
+      path: "/education",
+      main: () => <Education/>
+    },
+    {
+      path: "/skills",
+      main: () => <Skills/>
+    },
+    {
+      path: "/interest",
+      main: () => <Interest/>
+    },
+    {
+      path: "/awards",
+      main: () => <Awards/>
+    }
+  ]
   return (
-    <div className="App">
-      <Header/>
-      <section>
-        <div>
-          <aside>
-            <div className="scrollaside">
-              <div className="avatar">
-                <div className="inner">
-                  <Images src={Imgme} alt="Me" />
+    <Router>
+      <div className="App">
+        <Header/>
+        <section>
+          <div>
+            <aside>
+              <div className="scrollaside">
+                <div className="avatar">
+                  <div className="inner">
+                    <Images src={Imgme} alt="Me" />
+                  </div>
                 </div>
+                <nav>
+                  <ul className="menu">
+                    <li className="active"><Link to="/">About</Link></li>
+                    <li><Link to="/experience">Experience</Link></li>
+                    <li><Link to="/education">Education</Link></li>
+                    <li><Link to="/skills">Skills</Link></li>
+                    <li><Link to="/interest">Interest</Link></li>
+                    <li><Link to="/awards">Awards</Link></li>
+                  </ul>
+                </nav>
               </div>
-              <nav>
-                <ul className="menu">
-                  <li className="active"><a href="#about">About</a></li>
-                  <li><a href="#experience">Experience</a></li>
-                  <li><a href="#education">Education</a></li>
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#interest">Interest</a></li>
-                  <li><a href="#awards">Awards</a></li>
-                </ul>
-              </nav>
-            </div>
-          </aside>
-          <div className="content">
-            <div className="scroll">
-              <About/>
-              <Experience/>
-              <Education/>
-              <Skills/>
-              <Interest/>
-              <Awards/>
-              <Copyright/>
+            </aside>
+            <div className="content">
+              <div className="scroll">
+                <Switch>
+                  {routes.map((route, index) => (
+                    <Route key={index} path={route.path} exact={route.exact} children={<route.main />} />
+                  ))}
+                </Switch>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </Router>
   );
 }
 
